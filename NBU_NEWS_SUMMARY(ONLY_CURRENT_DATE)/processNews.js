@@ -20,7 +20,7 @@ async function summarizeNews(content) {
         const response = await openai.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [
-                { role: "system", content: "Ти допомагаєш створювати короткі вижимки (підсумки) новин." },
+                { role: "system", content: "Ти допомагаєш створювати короткі вижимки (підсумки) новин. Якщо отриманий промпт починається як PDF-файл: <посилання>, то просто кажи користувачу, що детальнішу інформацію можна отримати натиснувши 'Читати далі'." },
                 { role: "user", content: prompt }
             ],
             max_tokens: 150,

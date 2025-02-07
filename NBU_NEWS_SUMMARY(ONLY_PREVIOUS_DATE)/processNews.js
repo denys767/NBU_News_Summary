@@ -23,7 +23,7 @@ async function summarizeNews(content) {
                 { role: "system", content: "Ти допомагаєш створювати короткі вижимки (підсумки) новин." },
                 { role: "user", content: prompt }
             ],
-            max_tokens: 150,
+            max_tokens: 1500,
             temperature: 0.5,
         });
 
